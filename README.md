@@ -1,57 +1,47 @@
-# Getting Started with Create React App
+# Aplicación de Sistema de Créditos "Invested"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* [1. Resumen del proyecto](#1-resumen-del-proyecto)
+* [2. Investigación UX](#2-investigación-ux)
+* [3. Herramientas implementadas](#3-primer-herramientas-implementadas)      
+* [4. Imagen de prototipo de baja fidelidad](#4-imagen-de-prototipo-baja-fidelidad)
+* [5. Imagen 1 de la app](#5-imagen-1-de-la-app)
+* [6. Imagen 2 de la app](#6-imagen-2-de-la-app)
+* [7. Imagen 3 de la app](#7-imagen-3-de-la-app)
+* [8. Flujo de la Aplicación ](#8-flujo-de-la-aplicacion)
+* [9. Imagen adicional a Fun Facts](#9-imagen-adicional-a-fun-facts)
 
-## Available Scripts
+***
 
-In the project directory, you can run:
+## 1. Resumen del proyecto
 
-### `npm start`
+La temática del proyecto consiste en un sistema de créditos que contiene clientes registrados;
+y permite dar de alta a nuevos clientes que requieran un crédito determinado.
+Los usuarios registrados tienen la opción de solicitar más de un crédito, siempre y cuando cada 
+monto solicitado sea cubierto en 4 parcialidades;la aplicación permite visualizar cuentas liquidadas,
+pagos realizados, así como usuarios que no han aportado ningún pago.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 2. Investigación UX
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Esta aplicación es dirigida a todas aquellas personas que tengan la intensión de alcanzar un bienestar 
+financiero, que les permita mejorar su situación y el de su entorno. 
+El usuario podrá desplazarse por toda la página, sin problema alguno, ya que es amigable y ágil.
 
-### `npm test`
+## 3. Herramientas Implementadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En el comienzo de la aplicación había decidido realizar el proyecto mediante: CSS, HTML, JAVASCRIPT Y REACT.
+Después decidí agregar BOOTSTRAP (anteriomente nunca lo había usado) para familiarizarme y conocer en práctica 
+las herramientas que brinda este framework, fue un gran reto.
 
-### `npm run build`
+## 8. Flujo de la Aplicación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La gestión de la app se desarrolló partiendo de las operaciones CRUD. 
+Para el almacenamiento de datos se usó la memoria del navegador (no incluye backend).
+**Login** es la primera layout de la app, para ingresar se necesita un número de empleado y contraseña que se encuentran en el objeto mockUser: employee: **1234**  password: **hello**. 
+Se negará el acceso a empleados no registrados en mockUser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Segunda vista de la app es **Users**, layout donde el empleado podrá visualizar a usuarios registrados(RFC, Nombre, Teléfono y Acciones) así como editar, borrar y ver créditos. También podrá agregar a nuevos clientes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Al momento de dar click en ver créditos, la ruta dirigirá al empleado a la tercera vista **Credit** en donde tendrá acceso a ver (Id, Crédito solicitado, Parcialidades pagadas, Monto pagado, Monto restante y Estado)  así como editar y borrar esos campos. Igualmente tendrá la opción de agregar un nuevo crédito.
 
 ### Making a Progressive Web App
 
@@ -65,6 +55,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

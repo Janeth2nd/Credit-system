@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {  useNavigate } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
@@ -10,26 +11,36 @@ import UserModalEdit from '../Components/UserModalEdit';
 
 
 const Users = () => {
+    const navigate = useNavigate();
+    const investedImg = require.context('../img', true)
     const usersArray = [
         {
             name: "Alfredo",
             rfc: "TAPA0280",
-            tel: 55508759555
+            tel: 5528943517,
+            credits:[ {
+                id: "XH31",
+                amount: 10000,
+                parcialidades: 2,
+                montoPagado: 5000,
+                montoRestante: 5000
+            },
+            ]
         },
         {
             name: "Franc",
             rfc: "GAKO0880",
-            tel: 722589423361
+            tel: 7225804512
         },
         {
             name: "Sam",
             rfc: "LOSP8965",
-            tel: 78540875955
+            tel: 4454382897
         },
         {
             name: "Cinthya",
             rfc: "SEGT7289",
-            tel: 55508759555
+            tel: 5583796107
         }
     ]
 
@@ -39,6 +50,7 @@ const Users = () => {
     const [userToEdit, setUserToEdit] = useState({});
 
     const handleShow = () => setShowAdd(!showAdd); 
+    
     const handleShowEdit = (user) => { 
         setShowEdit(!showEdit);
         setUserToEdit(user);
@@ -49,7 +61,7 @@ const Users = () => {
         const newUser =  {
             rfc: event.target.rfc.value,
             name: event.target.name.value,
-            tel: event.target.tel.value,
+            tel: event.target.tel.value
         }
         setUsers([newUser,...users]);
         setShowAdd(false);
@@ -64,7 +76,7 @@ const Users = () => {
         const newUser =  {
             rfc: event.target.rfc.value,
             name: event.target.name.value,
-            tel: event.target.tel.value,
+            tel: event.target.tel.value
         }
         const editedUsers = users.map((user) =>{
             if(userToEdit.rfc === user.rfc){
@@ -76,16 +88,20 @@ const Users = () => {
         setShowEdit(false);
     }
 
+    const handleToCredits =()=>{
+        navigate("/credit");
+    }
+
     return (
 
         <Container>
-            <Row className="justify-content-md-center"><Col md="auto">Bienvenido Alfred</Col></Row>
-            <Row> <Col md="2"><Button variant="primary" onClick={handleShow}>Agregar</Button></Col></Row>
+            <Row className="justify-content-md-center"><Col md="auto"><img className="img-thumbnail mx-auto d-block h-50 m-3" alt="img-invested" src={investedImg(`./invested-img.png`)}></img></Col></Row>
+            <Row className="justify-content-md-end"> <Col md="2"><Button className="mb-3" variant="primary" onClick={handleShow}>Agregar</Button></Col></Row>
             <Row>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>RCF</th>
+                            <th>RFC</th>
                             <th>Nombre</th>
                             <th>Teléfono</th>
                             <th>Acciones</th>
@@ -98,7 +114,7 @@ const Users = () => {
                                     <td>{user.rfc}</td>
                                     <td>{user.name}</td>
                                     <td>{user.tel}</td>
-                                    <td><Button variant="outline-info">Ver créditos</Button>{' '}  
+                                    <td><Button variant="outline-info"  onClick={handleToCredits}>Ver créditos</Button>{' '}  
                                     <Button variant="outline-warning"  onClick={()=>handleShowEdit(user)}>Editar</Button>{' '}
                                     <Button variant="outline-danger" onClick={()=>handleDeleteUser(user.rfc)}>Eliminar</Button>{' '}</td>
                                 </tr>
