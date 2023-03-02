@@ -4,11 +4,11 @@
 * [2. Investigación UX](#2-investigación-ux)
 * [3. Herramientas implementadas](#3-primer-herramientas-implementadas)      
 * [4. Imagen de prototipo de baja fidelidad](#4-imagen-de-prototipo-baja-fidelidad)
-* [5. Imagen 1 de la app](#5-imagen-1-de-la-app)
-* [6. Imagen 2 de la app](#6-imagen-2-de-la-app)
-* [7. Imagen 3 de la app](#7-imagen-3-de-la-app)
-* [8. Flujo de la Aplicación ](#8-flujo-de-la-aplicacion)
-* [9. Imagen adicional a Fun Facts](#9-imagen-adicional-a-fun-facts)
+* [5. Imagen de la vista 1](#5-imagen-de-la-vista-1)
+* [6. Imagen de la vista 2](#6-imagen-de-la-vista-2)
+* [7. Imagen de la vista 3](#7-imagen-de-la-vista-3)
+* [8. Imagen de la vista 4](#8-imagen-de-la-vista-4)
+* [9. Flujo de la Aplicación ](#9-flujo-de-la-aplicacion)
 
 ***
 
@@ -30,7 +30,7 @@ El usuario podrá desplazarse por toda la página, sin problema alguno, ya que e
 
 En el comienzo de la aplicación había decidido realizar el proyecto mediante: CSS, HTML, JAVASCRIPT Y REACT.
 Después decidí agregar BOOTSTRAP (anteriomente nunca lo había usado) para familiarizarme y conocer en práctica 
-las herramientas que brinda este framework, fue un gran reto.
+las herramientas que brinda este libreria, fue un gran reto.
 
 ## 8. Flujo de la Aplicación
 
@@ -43,15 +43,14 @@ Segunda vista de la app es **Users**, layout donde el empleado podrá visualizar
 
 Al momento de dar click en ver créditos, la ruta dirigirá al empleado a la tercera vista **Credit** en donde tendrá acceso a ver (Id, Crédito solicitado, Parcialidades pagadas, Monto pagado, Monto restante y Estado)  así como editar y borrar esos campos. Igualmente tendrá la opción de agregar un nuevo crédito.
 
-### Making a Progressive Web App
+## Imagen de la vista 1
+![Imagen de la vista 1](imagen-inve-1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Imagen de la vista 2
+![Imagen de la vista 2](imagen-inve-2.png)
 
-### Advanced Configuration
+## Imagen de la vista 3
+![Imagen de la vista 3](imagen-inves-3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
+## Imagen de la vista 4
+![Imagen de la vista 4](imagen-inves-4.png)

@@ -48,12 +48,13 @@ const Login = () => {
     return (
         <Container className="display-flex">
             <Row className="justify-content-md-center"><Col md="auto"><img className="img-thumbnail mx-auto d-block h-50 m-3" alt="img-invested" src={investedImg(`./invested-img.png`)}></img></Col></Row>
-
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+            <div  style={{alignContent:"center",alignItems:'center' ,justifyContent:"center",display:"flex"}}></div> 
+            <Form  noValidate validated={validated} onSubmit={handleSubmit}>
 
                 <Form.Group controlId="employeeInput">
+            
                     <Form.Label>Número de empleado</Form.Label>
-                    <Form.Control className="w-25 p-1.5"
+                    <Form.Control  
                         required
                         type="number"
                         isInvalid={!!validated}
@@ -65,7 +66,7 @@ const Login = () => {
 
                 <Form.Group className="mb-2" controlId="passwordInput">
                     <Form.Label >Contraseña</Form.Label>
-                    <Form.Control className="w-25 p-1.5"
+                    <Form.Control 
                         type="password"
                         required
                         isInvalid={!!validated}
@@ -75,7 +76,8 @@ const Login = () => {
                     </Form.Control.Feedback>
                 </Form.Group>
 
-                <Button type="submit">Ingresar</Button>
+                <div style={{justifyContent:'center', display:"flex"}}> <Button  type="submit">Ingresar</Button></div>
+
             </Form>
         </Container>
     );
