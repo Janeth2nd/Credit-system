@@ -79,7 +79,7 @@ const Users = () => {
     return (
 
         <Container>
-            <Row className="justify-content-md-center"><Col md="auto">Bienvenido Alfred</Col></Row>
+            <Row className="justify-content-md-center"><Col md="auto"></Col></Row>
             <Row> <Col md="2"><Button variant="primary" onClick={handleShow}>Agregar</Button></Col></Row>
             <Row>
                 <Table striped bordered hover>
