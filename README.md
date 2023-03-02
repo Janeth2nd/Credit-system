@@ -4,10 +4,6 @@
 * [2. Investigación UX](#2-investigación-ux)
 * [3. Herramientas implementadas](#3-primer-herramientas-implementadas)
 * [4. Flujo de la Aplicación ](#4-flujo-de-la-aplicacion)    
-* [5. Imagen de la vista 1](#5-imagen-de-la-vista-1)
-* [6. Imagen de la vista 2](#6-imagen-de-la-vista-2)
-* [7. Imagen de la vista 3](#7-imagen-de-la-vista-3)
-* [8. Imagen de la vista 4](#8-imagen-de-la-vista-4)
 
 
 ***
@@ -43,14 +39,3 @@ Segunda vista de la app es **Users**, layout donde el empleado podrá visualizar
 
 Al momento de dar click en ver créditos, la ruta dirigirá al empleado a la tercera vista **Credit** en donde tendrá acceso a ver (Id, Crédito solicitado, Parcialidades pagadas, Monto pagado, Monto restante y Estado)  así como editar y borrar esos campos. Igualmente tendrá la opción de agregar un nuevo crédito.
 
-## 5. Imagen de la vista 1
-![Imagen de la vista 1](imagen-/inves-1.png)
-
-## 6. Imagen de la vista 2
-![Imagen de la vista 2](imagen-inve-2.png)
-
-## 7. Imagen de la vista 3
-![Imagen de la vista 3](imagen-inves-3.png)
-
-## 8. Imagen de la vista 4
-![Imagen de la vista 4](imagen-inves-4.png)
