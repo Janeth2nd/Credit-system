@@ -31,7 +31,6 @@ las herramientas que brinda este libreria, fue un gran reto.
 ## 4. Flujo de la Aplicación
 
 La gestión de la app se desarrolló partiendo de las operaciones CRUD. 
-Para el almacenamiento de datos se usó la memoria del navegador (no incluye backend).
 **Login** es la primera layout de la app, para ingresar se necesita un número de empleado y contraseña que se encuentran en el objeto mockUser: employee: **00153**  password: **srl_58**. 
 Se negará el acceso a empleados no registrados en mockUser.
 
