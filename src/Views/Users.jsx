@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {  useNavigate } from "react-router-dom";
+import {  useNavigate  } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
@@ -25,22 +25,67 @@ const Users = () => {
                 montoPagado: 5000,
                 montoRestante: 5000
             },
+            {
+                id: "XH32",
+                amount: 8000,
+                parcialidades: 1,
+                montoPagado: 2000,
+                montoRestante: 6000
+            },
+            {
+                id: "XH33",
+                amount: 17000,
+                parcialidades: 3,
+                montoPagado: 4250,
+                montoRestante: 12750
+            },
+            {
+                id: "XH34",
+                amount: 4000,
+                parcialidades: 4,
+                montoPagado: 4000,
+                montoRestante: 0
+            }
             ]
         },
         {
             name: "Franc",
             rfc: "GAKO0880",
-            tel: 7225804512
+            tel: 7225804512,
+            credits:[ {
+                id: "XH31",
+                amount: 10000,
+                parcialidades: 2,
+                montoPagado: 5000,
+                montoRestante: 5000
+            },
+            ]
         },
         {
             name: "Sam",
             rfc: "LOSP8965",
-            tel: 4454382897
+            tel: 4454382897,
+            credits:[ {
+                id: "XH31",
+                amount: 10000,
+                parcialidades: 2,
+                montoPagado: 5000,
+                montoRestante: 5000
+            },
+            ]
         },
         {
             name: "Cinthya",
             rfc: "SEGT7289",
-            tel: 5583796107
+            tel: 5583796107,
+            credits:[ {
+                id: "XH31",
+                amount: 10000,
+                parcialidades: 2,
+                montoPagado: 5000,
+                montoRestante: 5000
+            },
+            ]
         }
     ]
 
@@ -88,8 +133,9 @@ const Users = () => {
         setShowEdit(false);
     }
 
-    const handleToCredits =()=>{
-        navigate("/credit");
+    const handleToCredits =(credits)=>{
+        
+        navigate("/credit", { state: {credits:credits}  });
     }
 
     return (
@@ -114,7 +160,7 @@ const Users = () => {
                                     <td>{user.rfc}</td>
                                     <td>{user.name}</td>
                                     <td>{user.tel}</td>
-                                    <td><Button variant="outline-info"  onClick={handleToCredits}>Ver créditos</Button>{' '}  
+                                    <td><Button variant="outline-info"  onClick={()=>handleToCredits(user.credits)}>Ver créditos</Button>{' '}  
                                     <Button variant="outline-warning"  onClick={()=>handleShowEdit(user)}>Editar</Button>{' '}
                                     <Button variant="outline-danger" onClick={()=>handleDeleteUser(user.rfc)}>Eliminar</Button>{' '}</td>
                                 </tr>

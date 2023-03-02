@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useLocation } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,7 +10,8 @@ import UserModalEditCredit from "../Components/UserModalEditCredit";
 
 
 const Credit = () => {
-    
+
+    const location=useLocation();
     const investedImg = require.context('../img', true)
     const userCreditsArray = [
         {
@@ -44,7 +46,7 @@ const Credit = () => {
     ]
 
 
-    const [users, setUsers] = useState (userCreditsArray)
+    const [credits, setCredits] = useState (location.state.credits);
     const [showAdd, setShowAdd] = useState(false);
     const [showEdit, setShowEdit] = useState(false);
     const [userToEdit, setUserToEdit] = useState({});
@@ -58,7 +60,7 @@ const Credit = () => {
 
     const handleSubmit =(event) =>{  
         event.preventDefault();
-        const newUser =  {
+        const newCredit =  {
             id: event.target.id.value,
             amount: event.target.amount.value,
             parcialidades: event.target.parcialidades.value,
@@ -66,32 +68,33 @@ const Credit = () => {
             montoRestante: event.target.montoRestante.value
             
         }
-        setUsers([newUser,...users]);
+        setCredits([newCredit,...credits]);
+        location.state.credits= [newCredit,...credits]
         setShowAdd(false);
     }
     
 
     const handleDeleteCredit =(id)=>{
-        const filteredUsers= users.filter(user=> user.id !== id); 
-        setUsers(filteredUsers)
+        const filteredUsers= credits.filter(user=> user.id !== id); 
+        setCredits(filteredUsers)
     }
 
     const handleEditUserSubmit =(event)=>{
         event.preventDefault();
-        const newUser =  {
+        const newCredit =  {
             id: event.target.id.value,
             amount: event.target.amount.value,
             parcialidades: event.target.parcialidades.value,
             montoPagado: event.target.montoPagado.value,
             montoRestante: event.target.montoRestante.value
         }
-        const editedUsers = users.map((user) =>{
+        const editedCredits = credits.map((user) =>{
             if(userToEdit.id === user.id){
-                return newUser
+                return newCredit
             }
             return user
         })
-        setUsers(editedUsers)
+        setCredits(editedCredits)
         setShowEdit(false);
     }
 
@@ -118,7 +121,7 @@ const Credit = () => {
                 </thead>
                 <tbody>
                         {
-                            users.map((credit, elements) => (  
+                            credits.map((credit, elements) => (  
                                 <tr key={elements}>
                                     <td>{credit.id}</td>
                                     <td>{credit.amount}</td>
