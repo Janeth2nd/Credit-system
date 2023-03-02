@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-const UserModalEdit = ({ show, handleShow, handleSubmit, user }) => { //cómo se importaron estos props desde Users???
+const UserModalEdit = ({ show, handleShow, handleSubmit, user }) => { 
 
 
     return (
