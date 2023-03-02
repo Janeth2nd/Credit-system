@@ -11,86 +11,35 @@ import UserModalEdit from '../Components/UserModalEdit';
 
 
 const Users = () => {
+
     const navigate = useNavigate();
-    const investedImg = require.context('../img', true)
+    const investedImg = require.context('../img', true);
+
     const usersArray = [
         {
             name: "Alfredo",
             rfc: "TAPA0280",
             tel: 5528943517,
-            credits:[ {
-                id: "XH31",
-                amount: 10000,
-                parcialidades: 2,
-                montoPagado: 5000,
-                montoRestante: 5000
-            },
-            {
-                id: "XH32",
-                amount: 8000,
-                parcialidades: 1,
-                montoPagado: 2000,
-                montoRestante: 6000
-            },
-            {
-                id: "XH33",
-                amount: 17000,
-                parcialidades: 3,
-                montoPagado: 4250,
-                montoRestante: 12750
-            },
-            {
-                id: "XH34",
-                amount: 4000,
-                parcialidades: 4,
-                montoPagado: 4000,
-                montoRestante: 0
-            }
-            ]
         },
         {
             name: "Franc",
             rfc: "GAKO0880",
             tel: 7225804512,
-            credits:[ {
-                id: "XH31",
-                amount: 10000,
-                parcialidades: 2,
-                montoPagado: 5000,
-                montoRestante: 5000
-            },
-            ]
         },
         {
             name: "Sam",
             rfc: "LOSP8965",
             tel: 4454382897,
-            credits:[ {
-                id: "XH31",
-                amount: 10000,
-                parcialidades: 2,
-                montoPagado: 5000,
-                montoRestante: 5000
-            },
-            ]
         },
         {
             name: "Cinthya",
             rfc: "SEGT7289",
             tel: 5583796107,
-            credits:[ {
-                id: "XH31",
-                amount: 10000,
-                parcialidades: 2,
-                montoPagado: 5000,
-                montoRestante: 5000
-            },
-            ]
         }
     ]
 
     const [users, setUsers] = useState (usersArray)
-    const [showAdd, setShowAdd] = useState(false);   //mostrar modal, (quiero q inicie en false porq no quiero mostrarlo, hasta q el usuario lo decida)
+    const [showAdd, setShowAdd] = useState(false);   
     const [showEdit, setShowEdit] = useState(false);
     const [userToEdit, setUserToEdit] = useState({});
 
@@ -134,7 +83,6 @@ const Users = () => {
     }
 
     const handleToCredits =(credits)=>{
-        
         navigate("/credit", { state: {credits:credits}  });
     }
 
@@ -160,7 +108,7 @@ const Users = () => {
                                     <td>{user.rfc}</td>
                                     <td>{user.name}</td>
                                     <td>{user.tel}</td>
-                                    <td><Button variant="outline-info"  onClick={()=>handleToCredits(user.credits)}>Ver créditos</Button>{' '}  
+                                    <td><Button variant="outline-info"  onClick={()=>handleToCredits(user)}>Ver créditos</Button>{' '}  
                                     <Button variant="outline-warning"  onClick={()=>handleShowEdit(user)}>Editar</Button>{' '}
                                     <Button variant="outline-danger" onClick={()=>handleDeleteUser(user.rfc)}>Eliminar</Button>{' '}</td>
                                 </tr>

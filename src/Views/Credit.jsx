@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import { useLocation } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -11,7 +10,6 @@ import UserModalEditCredit from "../Components/UserModalEditCredit";
 
 const Credit = () => {
 
-    const location=useLocation();
     const investedImg = require.context('../img', true)
     const userCreditsArray = [
         {
@@ -46,7 +44,7 @@ const Credit = () => {
     ]
 
 
-    const [credits, setCredits] = useState (location.state.credits);
+    const [credits, setCredits] = useState (userCreditsArray);
     const [showAdd, setShowAdd] = useState(false);
     const [showEdit, setShowEdit] = useState(false);
     const [userToEdit, setUserToEdit] = useState({});
@@ -69,7 +67,6 @@ const Credit = () => {
             
         }
         setCredits([newCredit,...credits]);
-        location.state.credits= [newCredit,...credits]
         setShowAdd(false);
     }
     
@@ -97,10 +94,7 @@ const Credit = () => {
         setCredits(editedCredits)
         setShowEdit(false);
     }
-
-
-
-
+    
     return (
         <Container>
             <Row className="justify-content-md-center"><Col md="auto"><img className="img-thumbnail mx-auto d-block h-50 m-3" alt="img-invested" src={investedImg(`./invested-img.png`)}></img></Col></Row>
