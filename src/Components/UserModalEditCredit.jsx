@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-const UserModalEditCredit = ({ show, handleShow, handleSubmit, user }) => { //cómo se importaron estos props desde Users???
+const UserModalEditCredit = ({ show, handleShow, handleSubmit, user }) => { 
 
-// por q <>  ???
+
     return (
         <> 
         <Modal show={show} onHide={handleShow}>

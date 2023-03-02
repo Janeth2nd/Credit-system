@@ -17,8 +17,8 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         const mockUser = {
-            employee: '1234',
-            password: 'hello'
+            employee: '00153',
+            password: 'srl_58'
         }
 
         console.log(event.target.passwordInput.value)
@@ -27,7 +27,6 @@ const Login = () => {
             handleError(event)
         } else {
             if (event.target.employeeInput.value === mockUser.employee && event.target.passwordInput.value === mockUser.password) {
-                //navega a la vista
                 navigate("/users");
                 setValidated(false);
             } else {
@@ -48,7 +47,7 @@ const Login = () => {
     return (
         <Container className="display-flex">
             <Row className="justify-content-md-center"><Col md="auto"><img className="img-thumbnail mx-auto d-block h-50 m-3" alt="img-invested" src={investedImg(`./invested-img.png`)}></img></Col></Row>
-            <div  style={{alignContent:"center",alignItems:'center' ,justifyContent:"center",display:"flex"}}></div> 
+            <div  style={{alignContent:"center",alignItems:"center" ,justifyContent:"center",display:"flex", width:"100%"}}>
             <Form  noValidate validated={validated} onSubmit={handleSubmit}>
 
                 <Form.Group controlId="employeeInput">
@@ -79,6 +78,7 @@ const Login = () => {
                 <div style={{justifyContent:'center', display:"flex"}}> <Button  type="submit">Ingresar</Button></div>
 
             </Form>
+            </div> 
         </Container>
     );
 
