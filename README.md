@@ -42,5 +42,10 @@ Al momento de dar click en ver créditos, la ruta dirigirá al empleado a la ter
 
 ![Vista de Login](src/img/imagen-inves-1.png)
 
+## 6. Vista de Users
+![Vista de Users](src/img/imagen-inve-2.png)
+
+
+
 
 
