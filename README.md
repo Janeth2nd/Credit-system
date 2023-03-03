@@ -40,6 +40,6 @@ Al momento de dar click en ver créditos, la ruta dirigirá al empleado a la ter
 
 ## 5. Vista de Login
 
-![Vista de Login](https://github.com/Janeth2nd/Credit-system/blob/master/img/imagen-inves-1.png)
+![Vista de Login](https://github.com/Janeth2nd/Credit-system/master/img/imagen-inves-1.png)
 
 
