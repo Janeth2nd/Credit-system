@@ -38,3 +38,8 @@ Segunda vista de la app es **Users**, layout donde el empleado podrá visualizar
 
 Al momento de dar click en ver créditos, la ruta dirigirá al empleado a la tercera vista **Credit** en donde tendrá acceso a ver (Id, Crédito solicitado, Parcialidades pagadas, Monto pagado, Monto restante y Estado)  así como editar y borrar esos campos. Igualmente tendrá la opción de agregar un nuevo crédito.
 
+## 5. Vista de Login
+
+(https://github.com/Janeth2nd/Credit-system/blob/master/img/imagen-inves-1.png)
+
+
