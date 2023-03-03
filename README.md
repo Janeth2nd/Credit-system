@@ -3,8 +3,11 @@
 * [1. Resumen del proyecto](#1-resumen-del-proyecto)
 * [2. Investigación UX](#2-investigación-ux)
 * [3. Herramientas implementadas](#3-primer-herramientas-implementadas)
-* [4. Flujo de la Aplicación ](#4-flujo-de-la-aplicacion)    
-
+* [4. Flujo de la Aplicación ](#4-flujo-de-la-aplicacion)
+* [5. Vista de Login ](#5-vista-de-login)
+* [6. Vista de Users ](#6-vista-de-users)
+* [7. Vista de Credits ](#7-vista-de-credits)
+* [8. Modal para agregar nuevo crédito ](#8-modal-para-agregar-nuevo-crédito)
 
 ***
 
