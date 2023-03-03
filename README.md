@@ -45,6 +45,15 @@ Al momento de dar click en ver créditos, la ruta dirigirá al empleado a la ter
 ## 6. Vista de Users
 ![Vista de Users](src/img/imagen-inve-2.png)
 
+## 7. Vista de Credits
+![Vista de Credits](src/img/imagen-inves-3.png)
+
+## 8. Modal para agregar nuevo crédito
+![Modal para agregar nuevo crédito](src/img/imagen-inves-4.png)
+
+
+
+
 
 
 
