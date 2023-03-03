@@ -29,7 +29,7 @@ El usuario podrá desplazarse por toda la página, sin problema alguno, ya que e
 
 En el comienzo de la aplicación había decidido realizar el proyecto mediante: CSS, HTML, JAVASCRIPT Y REACT.
 Después decidí agregar BOOTSTRAP (anteriomente nunca lo había usado) para familiarizarme y conocer en práctica 
-las herramientas que brinda este libreria, fue un gran reto.
+las herramientas que brinda este librería, fue un gran reto.
 
 ## 4. Flujo de la Aplicación
 
