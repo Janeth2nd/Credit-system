@@ -13,7 +13,7 @@
 
 ## 1. Resumen del proyecto
 
-La temática del proyecto consiste en un sistema de créditos que contiene clientes registrados;
+La temática del proyecto consiste en un sistema de créditos que contiene clientes registrados
 y permite dar de alta a nuevos clientes que requieran un crédito determinado.
 Los usuarios registrados tienen la opción de solicitar más de un crédito, siempre y cuando cada 
 monto solicitado sea cubierto en 4 parcialidades;la aplicación permite visualizar cuentas liquidadas,

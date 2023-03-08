@@ -97,7 +97,7 @@ const Credit = () => {
     
     return (
         <Container>
-            <Row className="justify-content-md-center"><Col md="auto"><img className="img-thumbnail mx-auto d-block h-50 m-3" alt="img-invested" src={investedImg(`./invested-img.png`)}></img></Col></Row>
+            <Row className="justify-content-md-center"><Col md="auto"><img className="img-fluid mx-auto d-block h-50 m-3" alt="img-invested" src={investedImg(`./credit-imagen.png`)}></img></Col></Row>
             <Row className="justify-content-md-end"> <Col md="2" ><Button className="mb-3" variant="primary" onClick={handleShow}>Agregar crédito</Button></Col></Row> 
             
         <Row>
